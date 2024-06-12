@@ -1,0 +1,15 @@
+<input type="text" autofocus id="num" placeholder="Enter number">
+<button onclick="getTable()"></button>
+<p id="result"></p>
+
+<script>
+    function getTabke(){
+        num = document.getElementById("num").value
+        output = ''
+        for(let i = 1;i<=10;i++){
+            output = output + `${num} * ${i} = ${num*i}`<br>
+            console.log(output)
+            document.getElementById("result").innerHTML = output
+        }
+    }
+</script>

@@ -1,0 +1,12 @@
+<input type="text" id="radius">Enter the radius of the circle</input>
+<br>
+<button onclick="getArea()">This will show the updated area</button>
+<br>
+<script>
+    function getArea(){
+        r = document.getElementById("radius").value
+        area = 3.14*r*r
+        output = `Area of circle having radius ${r} is ${area}`
+        document.getElementById("radius").innerHTML = output
+    }
+</script>
