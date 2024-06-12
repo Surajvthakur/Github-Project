@@ -1,0 +1,40 @@
+<!-- <input type="text" placeholder="Enter the number" id="num"><br>
+<button onclick="fract()">Click Me</button>
+<p id = "result"></p>
+
+<script>
+    function fract(num){
+        if(num <=1){
+            return 1
+        }
+        return num * fract(num-1)
+    }
+    num = parseInt(document.getElementById("num").value)
+    let output = fract(num)
+    console.log(output)
+    document.getElementById("result").innerHTML = output
+</script> -->
+
+<input type="text" placeholder="Enter the number" id="num"><br>
+<button onclick="calculateFactorial()">Click Me</button>
+<p id="result"></p>
+
+<script>
+    function fract(num) {
+        if (num <= 1) {
+            return 1;
+        }
+        return num * fract(num - 1);
+    }
+
+    function calculateFactorial() {
+        let num = parseInt(document.getElementById("num").value);
+        if (isNaN(num)) {
+            document.getElementById("result").innerHTML = "Please enter a valid number.";
+            return;
+        }
+        let output = fract(num);
+        console.log(output);
+        document.getElementById("result").innerHTML = "Factorial: " + output;
+    }
+</script>
